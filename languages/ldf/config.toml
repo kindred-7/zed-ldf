@@ -1,0 +1,6 @@
+name = "LDF"
+grammar = "ldf"
+
+path_suffixes = ["ldf"]
+line_comments = ["//"]
+tab_size = 4

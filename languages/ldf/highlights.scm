@@ -23,16 +23,27 @@
   "Event_triggered_frames"
   "Node_attributes"
   "Schedule_tables"
+  "Signal_encoding_types"
+  "Signal_representation"
   "Status_management"
   "General_description"
   "LIN_protocol"
   "configured_NAD"
   "initial_NAD"
   "product_id"
+  "P2_min"
+  "ST_min"
+  "N_as_timeout"
+  "N_cr_timeout"
   "response_error"
   "fault_state_signals"
   "configurable_frames"
+  "logical_value"
+  "physical_value"
+  "bcd_value"
+  "ascii_value"
   "kbps"
+  "delay"
   "ms"
 ] @keyword
 
@@ -45,12 +56,15 @@
 (sporadic_frame name: (identifier) @type)
 (event_triggered_frame name: (identifier) @type)
 (configurable_frames_attribute frame: (identifier) @type)
+(encoding_type name: (identifier) @type)
+(signal_representation encoding: (identifier) @type)
 
 ; 信号名（内容主体）
 (signal_definition name: (identifier) @property)
 (signal_assignment signal: (identifier) @property)
 (response_error_attribute signal: (identifier) @property)
 (fault_state_signals_attribute signal: (identifier) @property)
+(signal_representation signal: (identifier) @property)
 
 ; 节点名（收发方）
 (signal_definition publisher: (identifier) @constant)

@@ -1,6 +1,6 @@
 id = "ldf"
 name = "LDF"
-version = "0.1.0"
+version = "0.1.1"
 schema_version = 1
 authors = ["kindred-7"]
 description = "LIN Description File (.ldf) language support: syntax highlighting and outline"
@@ -9,5 +9,5 @@ repository = "https://github.com/kindred-7/zed-ldf"
 [grammars.ldf]
 # Own grammar (MIT), maintained at:
 repository = "https://github.com/kindred-7/tree-sitter-ldf"
-rev = "5b98ed3b92c112a36456c5e62169d6028cdd296c"
+rev = "cd6366a4d7c658d18060a118ca3e697052cbd749"
 # Local development can use a file:// URL pointing at grammars/tree-sitter-ldf

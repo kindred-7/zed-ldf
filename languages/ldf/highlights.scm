@@ -12,6 +12,7 @@
   "LIN_description_file"
   "LIN_protocol_version"
   "LIN_language_version"
+  "Channel_name"
   "LIN_speed"
   "Nodes"
   "Master"
@@ -19,6 +20,8 @@
   "Signals"
   "Diagnostic_signals"
   "Frames"
+  "Diagnostic_frames"
+  "Signal_groups"
   "Sporadic_frames"
   "Event_triggered_frames"
   "Node_attributes"
@@ -33,8 +36,8 @@
   "product_id"
   "P2_min"
   "ST_min"
-  "N_as_timeout"
-  "N_cr_timeout"
+  "N_As_timeout"
+  "N_Cr_timeout"
   "response_error"
   "fault_state_signals"
   "configurable_frames"
@@ -45,10 +48,19 @@
   "kbps"
   "delay"
   "ms"
+  "AssignNAD"
+  "AssignFrameId"
+  "AssignFrameIdRange"
+  "ConditionalChangeNAD"
+  "DataDump"
+  "SaveConfiguration"
+  "FreeFormat"
 ] @keyword
 
 ; 结构名：帧 / 表 / 节点（骨架）
 (frame_definition name: (identifier) @type)
+(diagnostic_frame name: (identifier) @type)
+(signal_group name: (identifier) @type)
 (schedule_table name: (identifier) @type)
 (schedule_slot name: (identifier) @type)
 (node_attribute name: (identifier) @type)
@@ -61,6 +73,7 @@
 
 ; 信号名（内容主体）
 (signal_definition name: (identifier) @property)
+(diagnostic_signal_definition name: (identifier) @property)
 (signal_assignment signal: (identifier) @property)
 (response_error_attribute signal: (identifier) @property)
 (fault_state_signals_attribute signal: (identifier) @property)
@@ -75,4 +88,5 @@
 (sporadic_frame frame: (identifier) @constant)
 (event_triggered_frame frame: (identifier) @constant)
 (event_triggered_frame collision_table: (identifier) @constant)
+(schedule_command (identifier) @constant)
 (nad_attribute value: (integer) @number)
